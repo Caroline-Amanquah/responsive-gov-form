@@ -24,5 +24,18 @@
     "waste": "mines",
     "telephoneNumber": "07398231824",
     "fileUpload1": {}
+  },
+  {
+    "fullName": "Carlos Manty",
+    "eventName": "carlosmanty@gmail.com",
+    "nationalInsuranceNumber": "PC123456C",
+    "password": "Hello321@",
+    "passport-issued-day": "25",
+    "passport-issued-month": "03",
+    "passport-issued-year": "1993",
+    "whereDoYouLive": "england",
+    "waste": "carcasses",
+    "telephoneNumber": "07398231826",
+    "fileUpload1": {}
   }
 ]
