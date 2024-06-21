@@ -398,3 +398,299 @@
        </body>
        </html>
        
+
+        <!-- <!DOCTYPE html>
+        <html lang="en" class="govuk-template">
+        <head>
+            <meta charset="utf-8">
+            <title>GOV.UK - The best place to find government services and information</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+            <meta name="theme-color" content="#0b0c0c">
+            <link rel="stylesheet" href="css/main.css">
+            <script defer src="index.js"></script>
+        </head>
+        <body class="govuk-template__body">
+            <script>
+                document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');
+            </script>
+            <header class="govuk-header" data-module="govuk-header">
+                <div class="govuk-header__container govuk-width-container">
+                    <div class="govuk-header__logo">
+                        <a href="/" class="govuk-header__link govuk-header__link--homepage">
+                            <svg focusable="false" role="img" class="govuk-header__logotype" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 148 30" height="30" width="148" aria-label="GOV.UK">
+                                <title>GOV.UK</title>
+                                <path d="..."></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="govuk-header__content">
+                        <a href="#" class="govuk-header__link govuk-header__service-name">
+                            Create GOV.UK Account
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <div class="govuk-width-container">
+                <form id="form" action="/">
+                    <div class="govuk-form-group" id="name-group">
+                        <label class="govuk-label" for="full-name">Full name</label>
+                        <input class="govuk-input" id="full-name" name="fullName" type="text" spellcheck="false" autocomplete="name">
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="event-name">Email address:*</label>
+                        <input class="govuk-input" id="event-name" name="eventName" type="text">
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="national-insurance-number">National Insurance number:*</label>
+                        <div id="national-insurance-number-hint" class="govuk-hint">
+                            It is on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’.
+                        </div>
+                        <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="national-insurance-number" name="nationalInsuranceNumber" type="text" spellcheck="false" aria-describedby="national-insurance-number-hint">
+                    </div>
+                    <div class="govuk-form-group govuk-password-input" data-module="govuk-password-input">
+                        <label class="govuk-label" for="password-input">Password:*</label>
+                        <div id="waste-hint" class="govuk-hint">
+                            Your password must be at least 8 characters long and contain at least one letter, one number, and one special character (e.g., ! @ # $ % ^ & * ( ) _ + - = { } [ ] : ; " ' < > , . ? / ` ~ | ).
+                        </div>
+                        <div class="govuk-input__wrapper govuk-password-input__wrapper">
+                            <input class="govuk-input govuk-password-input__input govuk-js-password-input-input" id="password-input" name="password" type="password" spellcheck="false" autocomplete="current-password" autocapitalize="none">
+                            <button type="button" class="govuk-button govuk-button--secondary govuk-password-input__toggle govuk-js-password-input-toggle" data-module="govuk-button" aria-controls="password-input" aria-label="Show password">Show</button>
+                        </div>
+                    </div>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            const toggleButton = document.querySelector('.govuk-js-password-input-toggle');
+                            const passwordInput = document.querySelector('.govuk-js-password-input-input');
+                            
+                            if (toggleButton && passwordInput) {
+                                toggleButton.addEventListener('click', function () {
+                                    const isPassword = passwordInput.type === 'password';
+                                    passwordInput.type = isPassword ? 'text' : 'password';
+                                    toggleButton.textContent = isPassword ? 'Hide' : 'Show';
+                                    toggleButton.setAttribute('aria-label', isPassword ? 'Hide password' : 'Show password');
+                                });
+                            }
+                        });
+                    </script>
+                    <div class="govuk-form-group" id="dob-form-group">
+                        <fieldset class="govuk-fieldset" role="group">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                                <label class="govuk-label" for="event-name">Date of Birth:*</label>
+                            </legend>
+                            <div id="dob-error-container"></div>
+                            <div id="passport-issued-hint" class="govuk-hint">For example, 27 3 1992</div>
+                            <div class="govuk-date-input" id="passport-issued">
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="passport-issued-day">Day</label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+                                    </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="passport-issued-month">Month</label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+                                    </div>
+                                </div>
+                                <div class="govuk-date-input__item">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label govuk-date-input__label" for="passport-issued-year">Year</label>
+                                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                                <label class="govuk-label" for="event-name">Place of Origin:*</label>
+                                <div id="origin-error-container"></div>
+                                <div id="waste-hint" class="govuk-hint">Select one.</div>
+                            </legend>
+                            <div class="govuk-radios" data-module="govuk-radios">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+                                    <label class="govuk-label govuk-radios__label" for="whereDoYouLive">England</label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+                                    <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">Scotland</label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio" value="wales">
+                                    <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">Wales</label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="whereDoYouLive-4" name="whereDoYouLive" type="radio" value="northern-ireland">
+                                    <label class="govuk-label govuk-radios__label" for="whereDoYouLive-4">Northern Ireland</label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset" aria-describedby="purpose-hint">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                                <label class="govuk-label" for="event-name">Account Purpose:*</label>
+                                <div id="purpose-error-container"></div>
+                            </legend>
+                            <div id="purpose-hint" class="govuk-hint">Select all that apply.</div>
+                            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                    <label class="govuk-label govuk-checkboxes__label" for="waste">Benefits and Financial Services</label>
+                                </div>
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                                    <label class="govuk-label govuk-checkboxes__label" for="waste-2">Personal and Family Services</label>
+                                </div>
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">Travel and Legal Services</label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="telephone-number">UK telephone number:*</label>
+                        <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephoneNumber" type="tel" autocomplete="tel">
+                    </div>
+                    <div class="govuk-form-group" id="file-upload-form-group">
+                        <label class="govuk-label" for="file-upload-1">Upload an image of yourself: <span style="font-style: italic; color: #6c757d;">(optional)</span></label>
+                        <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+                        <div id="file-error-container"></div>
+                    </div>
+                    <div class="govuk-button-group">
+                        <button type="submit" class="govuk-button" data-module="govuk-button">Create Account</button>
+                    </div>
+                </form>
+            </div>
+            <footer class="govuk-footer">
+                <div class="govuk-width-container">
+                    <div class="govuk-footer__navigation">
+                        <div class="govuk-footer__section govuk-grid-column-two-thirds">
+                            <h2 class="govuk-footer__heading govuk-heading-m">Services and information</h2>
+                            <ul class="govuk-footer__list govuk-footer__list--columns-2">
+                                <li class="govuk-footer__list-item">
+                                    <a class="govuk-footer__link" href="#">Benefits</a>
+                                </li>
+                                <li class="govuk-footer__list-item">
+                                    <a class="govuk-footer__link" href="#">Births, deaths, marriages and care</a>
+                                </li>
+                                <li class="govuk-footer__list-item">
+                                    <a class="govuk-footer__link" href="#">Business and self-employed</a>
+                                </li>
+                                <li class="govuk-footer__list-item">
+                                    <a class="govuk-footer__link" href="#">Childcare and parenting</a>
+                                </li>
+                                <li class="govuk-footer__list-item">
+                                    <a class="govuk-footer__link" href="#">Citizenship and living in the UK</a>
+                                </li>
+                                <li class="govuk-footer__list-item">
+                                    <a class="govuk-footer__link" href="#">Crime, justice and the law</a>
+                                </li>
+                                <li class="govuk-footer__list-item">
+                                    <a class="govuk-footer__link" href="#">Disabled people</a>
+                                </li>
+                                <li class="govuk-footer__list-item">
+                                    <a class="govuk-footer__link" href="#">Driving and transport</a>
+                                </li>
+                                <li class="govuk-footer__list-item">
+                                    <a class="govuk-footer__link" href="#">Education and learning</a>
+                                </li>
+                                <li class="govuk-footer__list-item">
+                                    <a class="govuk-footer__link" href="#">Employing people</a>
+                                </li>
+                                <li class="govuk-footer__list-item">
+                                    <a class="govuk-footer__link" href="#">Environment and countryside</a>
+                                </li>
+                                <li class="govuk-footer__list-item">
+                                    <a class="govuk-footer__link" href="#">Housing and local services</a>
+                                </li>
+                                <li class="govuk-footer__list-item">
+                                    <a class="govuk-footer__link" href="#">Money and tax</a>
+                                </li>
+                                <li class="govuk-footer__list-item">
+                                    <a class="govuk-footer__link" href="#">Passports, travel and living abroad</a>
+                                </li>
+                                <li class="govuk-footer__list-item">
+                                    <a class="govuk-footer__link" href="#">Visas and immigration</a>
+                                </li>
+                                <li class="govuk-footer__list-item">
+                                    <a class="govuk-footer__link" href="#">Working, jobs and pensions</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="govuk-footer__section govuk-grid-column-one-third">
+                            <h2 class="govuk-footer__heading govuk-heading-m">Departments and policy</h2>
+                            <ul class="govuk-footer__list">
+                                <li class="govuk-footer__list-item">
+                                    <a class="govuk-footer__link" href="#">How government works</a>
+                                </li>
+                                <li class="govuk-footer__list-item">
+                                    <a class="govuk-footer__link" href="#">Departments</a>
+                                </li>
+                                <li class="govuk-footer__list-item">
+                                    <a class="govuk-footer__link" href="#">Worldwide</a>
+                                </li>
+                                <li class="govuk-footer__list-item">
+                                    <a class="govuk-footer__link" href="#">Policies</a>
+                                </li>
+                                <li class="govuk-footer__list-item">
+                                    <a class="govuk-footer__link" href="#">Publications</a>
+                                </li>
+                                <li class="govuk-footer__list-item">
+                                    <a class="govuk-footer__link" href="#">Announcements</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr class="govuk-footer__section-break">
+                    <div class="govuk-footer__meta">
+                        <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+                            <h2 class="govuk-visually-hidden">Support links</h2>
+                            <ul class="govuk-footer__inline-list">
+                                <li class="govuk-footer__inline-list-item">
+                                    <a class="govuk-footer__link" href="#">Help</a>
+                                </li>
+                                <li class="govuk-footer__inline-list-item">
+                                    <a class="govuk-footer__link" href="#">Cookies</a>
+                                </li>
+                                <li class="govuk-footer__inline-list-item">
+                                    <a class="govuk-footer__link" href="#">Contact</a>
+                                </li>
+                                <li class="govuk-footer__inline-list-item">
+                                    <a class="govuk-footer__link" href="#">Terms and conditions</a>
+                                </li>
+                                <li class="govuk-footer__inline-list-item">
+                                    <a class="govuk-footer__link" href="#" lang="cy" hreflang="cy">Rhestr o Wasanaethau Cymraeg</a>
+                                </li>
+                            </ul>
+                            <div class="govuk-footer__meta-custom">
+                                Built by the <a href="#" class="govuk-footer__link">Government Digital Service</a>
+                            </div>
+                            <svg aria-hidden="true" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
+                                <path fill="currentColor" d="..."></path>
+                            </svg>
+                            <span class="govuk-footer__licence-description">
+                                All content is available under the
+                                <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+                            </span>
+                        </div>
+                        <div class="govuk-footer__meta-item">
+                            <a class="govuk-footer__link govuk-footer__copyright-logo" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">
+                                <img src="/public/assets/images/govuk-crest.png" alt="Crown copyright logo" style="display: block; margin: 0 auto;">
+                            </a>
+                            <span style="display: block; text-align: center;">© Crown copyright</span>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <script type="module" src="/javascripts/govuk-frontend.min.js"></script>
+            <script type="module">
+                import { initAll } from '/javascripts/govuk-frontend.min.js';
+                initAll();
+            </script>
+        </body>
+        </html> -->
+        
