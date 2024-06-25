@@ -56,7 +56,7 @@
                            National Insurance number:*
                        </label>
                        <div id="national-insurance-number-hint" class="govuk-hint">
-                           It is on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’.
+                           It is on your National Insurance card, benefit letter, payslip or P60. For example, ‘PC 12 34 56 C’.
                        </div>
                        <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="national-insurance-number" name="nationalInsuranceNumber" type="text" spellcheck="false" aria-describedby="national-insurance-number-hint">
                    </div>
@@ -89,7 +89,7 @@
                            }
                        });
                    </script>
-                <div class="govuk-form-group" id="dob-form-group">
+                <!-- <div class="govuk-form-group" id="dob-form-group">
                   <fieldset class="govuk-fieldset" role="group">
                       <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                           <label class="govuk-label" for="event-name">Date of Birth:*</label>
@@ -119,7 +119,38 @@
                           </div>
                       </div>
                   </fieldset>
-              </div>
+              </div> -->
+              <div class="govuk-form-group" id="dob-form-group">
+                <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <label class="govuk-label" for="event-name">Date of Birth:*</label>
+                    </legend>
+                    <div id="dob-error-container"></div>
+                    <div id="dob-issued-hint" class="govuk-hint">
+                        For example, 27 3 1992
+                    </div>
+                    <div class="govuk-date-input" id="dob-issued">
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dob-issued-day">Day</label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-issued-day" name="dob-issued-day" type="text" inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dob-issued-month">Month</label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-issued-month" name="dob-issued-month" type="text" inputmode="numeric">
+                            </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="dob-issued-year">Year</label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-issued-year" name="dob-issued-year" type="text" inputmode="numeric">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">

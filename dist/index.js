@@ -82,7 +82,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function validateNI() {
-    const niRegex = /^[A-CEGHJ-PR-TW-Z]{2}[0-9]{6}[A-D]$/i;
+    // /^[A-CEGHJ-PR-TW-Z]{2}[0-9]{6}[A-D]?$/
+    const niRegex = /^[A-CEGHJ-PR-TW-Z]{2}[0-9]{6}[A-D]?$/;
     if (!niRegex.test(niInput.value.trim())) {
       displayError(
         niInput,
