@@ -5,15 +5,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const emailInput = document.getElementById("event-name");
   const niInput = document.getElementById("national-insurance-number");
   const passwordInput = document.getElementById("password-input");
-  const dobDayInput = document.getElementById("passport-issued-day");
-  const dobMonthInput = document.getElementById("passport-issued-month");
-  const dobYearInput = document.getElementById("passport-issued-year");
+  const dobDayInput = document.getElementById("dob-day");
+  const dobMonthInput = document.getElementById("dob-month");
+  const dobYearInput = document.getElementById("dob-year");
   const originInputs = document.querySelectorAll(
     'input[name="whereDoYouLive"]',
   );
-  const purposeInputs = document.querySelectorAll('input[name="waste"]');
+  const purposeInputs = document.querySelectorAll('input[name="accountPurpose"]');
   const phoneInput = document.getElementById("telephone-number");
-  const fileInput = document.getElementById("file-upload-1");
+  const fileInput = document.getElementById("file-upload");
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function validateNI() {
-    // /^[A-CEGHJ-PR-TW-Z]{2}[0-9]{6}[A-D]?$/
+
     const niRegex = /^[A-CEGHJ-PR-TW-Z]{2}[0-9]{6}[A-D]?$/;
     if (!niRegex.test(niInput.value.trim())) {
       displayError(
@@ -264,3 +264,5 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 });
+
+

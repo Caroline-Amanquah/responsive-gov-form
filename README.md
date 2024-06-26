@@ -18,19 +18,19 @@ To run ESLint, run the following command:
 ➜  Form git:(main) ✗ npm run lint:js    
 ```
 
-To test the validation, you can use a curl command to send a POST request to the /validate endpoint:
+To test the validation, you can use a curl command to send a POST request to the /validate endpoint, for example:
 
 ```bash
-curl -X POST http://localhost:3000/validate -H "Content-Type: application/json" -d '{ 
+➜  Form git:(main) ✗ curl -X POST http://localhost:3000/submissions -H "Content-Type: application/json" -d '{
   "fullName": "John Doe",
   "eventName": "john.doe@example.com",
   "nationalInsuranceNumber": "PC123456C",
   "password": "Password123!",
-  "passport-issued-day": 27,
-  "passport-issued-month": 3,
-  "passport-issued-year": 1992,
+  "dob-day": 27,
+  "dob-month": 3,
+  "dob-year": 1992,
   "whereDoYouLive": "england",
-  "waste": ["carcasses", "mines"],
+  "accountPurpose": ["Benefits and Financial Services", "Personal and Family Services"],
   "telephoneNumber": "07123456789"
 }'
 

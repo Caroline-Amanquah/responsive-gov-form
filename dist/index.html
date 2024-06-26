@@ -89,37 +89,6 @@
                            }
                        });
                    </script>
-                <!-- <div class="govuk-form-group" id="dob-form-group">
-                  <fieldset class="govuk-fieldset" role="group">
-                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                          <label class="govuk-label" for="event-name">Date of Birth:*</label>
-                      </legend>
-                      <div id="dob-error-container"></div>
-                      <div id="passport-issued-hint" class="govuk-hint">
-                          For example, 27 3 1992
-                      </div>
-                      <div class="govuk-date-input" id="passport-issued">
-                          <div class="govuk-date-input__item">
-                              <div class="govuk-form-group">
-                                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">Day</label>
-                                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
-                              </div>
-                          </div>
-                          <div class="govuk-date-input__item">
-                              <div class="govuk-form-group">
-                                  <label class="govuk-label govuk-date-input__label" for="passport-issued-month">Month</label>
-                                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
-                              </div>
-                          </div>
-                          <div class="govuk-date-input__item">
-                              <div class="govuk-form-group">
-                                  <label class="govuk-label govuk-date-input__label" for="passport-issued-year">Year</label>
-                                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
-                              </div>
-                          </div>
-                      </div>
-                  </fieldset>
-              </div> -->
               <div class="govuk-form-group" id="dob-form-group">
                 <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -129,23 +98,23 @@
                     <div id="dob-issued-hint" class="govuk-hint">
                         For example, 27 3 1992
                     </div>
-                    <div class="govuk-date-input" id="dob-issued">
+                    <div class="govuk-date-input" id="dob">
                         <div class="govuk-date-input__item">
                             <div class="govuk-form-group">
-                                <label class="govuk-label govuk-date-input__label" for="dob-issued-day">Day</label>
-                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-issued-day" name="dob-issued-day" type="text" inputmode="numeric">
+                                <label class="govuk-label govuk-date-input__label" for="dob-day">Day</label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" autocomplete="bday-day" inputmode="numeric">
                             </div>
                         </div>
                         <div class="govuk-date-input__item">
                             <div class="govuk-form-group">
-                                <label class="govuk-label govuk-date-input__label" for="dob-issued-month">Month</label>
-                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-issued-month" name="dob-issued-month" type="text" inputmode="numeric">
+                                <label class="govuk-label govuk-date-input__label" for="dob-month">Month</label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="text" autocomplete="bday-month" inputmode="numeric">
                             </div>
                         </div>
                         <div class="govuk-date-input__item">
                             <div class="govuk-form-group">
-                                <label class="govuk-label govuk-date-input__label" for="dob-issued-year">Year</label>
-                                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-issued-year" name="dob-issued-year" type="text" inputmode="numeric">
+                                <label class="govuk-label govuk-date-input__label" for="dob-year">Year</label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="text" autocomplete="bday-year" inputmode="numeric">
                             </div>
                         </div>
                     </div>
@@ -203,20 +172,20 @@
                         </div>
                         <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                             <div class="govuk-checkboxes__item">
-                                <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                                <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                <input class="govuk-checkboxes__input" id="accountPurpose" name="accountPurpose" type="checkbox" value="Benefits and Financial Services">
+                                <label class="govuk-label govuk-checkboxes__label" for="accountPurpose">
                                     Benefits and Financial Services
                                 </label>
                             </div>
                             <div class="govuk-checkboxes__item">
-                                <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-                                <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                <input class="govuk-checkboxes__input" id="accountPurpose-2" name="accountPurpose" type="checkbox" value="Personal and Family Services">
+                                <label class="govuk-label govuk-checkboxes__label" for="accountPurpose-2">
                                     Personal and Family Services
                                 </label>
                             </div>
                             <div class="govuk-checkboxes__item">
-                                <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-                                <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                <input class="govuk-checkboxes__input" id="accountPurpose-3" name="accountPurpose" type="checkbox" value="Travel and Legal Services">
+                                <label class="govuk-label govuk-checkboxes__label" for="accountPurpose-3">
                                     Travel and Legal Services
                                 </label>
                             </div>
