@@ -11,9 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const originInputs = document.querySelectorAll(
     'input[name="whereDoYouLive"]',
   );
-  const purposeInputs = document.querySelectorAll('input[name="accountPurpose"]');
+  const purposeInputs = document.querySelectorAll(
+    'input[name="accountPurpose"]',
+  );
   const phoneInput = document.getElementById("telephone-number");
-  const fileInput = document.getElementById("file-upload");
+  // const fileInput = document.getElementById("file-upload");
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -30,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
   dobMonthInput.addEventListener("input", () => validateDOB());
   dobYearInput.addEventListener("input", () => validateDOB());
   phoneInput.addEventListener("input", () => validatePhone());
-  fileInput.addEventListener("change", () => validateFile());
+  // fileInput.addEventListener("change", () => validateFile());
 
   originInputs.forEach((input) =>
     input.addEventListener("change", () => validateOrigin()),
@@ -50,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!validateOrigin()) formIsValid = false;
     if (!validatePurpose()) formIsValid = false;
     if (!validatePhone()) formIsValid = false;
-    if (!validateFile()) formIsValid = false;
+    // if (!validateFile()) formIsValid = false;
 
     return formIsValid;
   }
@@ -82,7 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function validateNI() {
-
     const niRegex = /^[A-CEGHJ-PR-TW-Z]{2}[0-9]{6}[A-D]?$/;
     if (!niRegex.test(niInput.value.trim())) {
       displayError(
@@ -190,16 +191,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function validateFile() {
-    const file = fileInput.files[0];
-    if (file && file.size > 2 * 1024 * 1024) {
-      displayError(fileInput, "file-error", "Image must be smaller than 2MB");
-      return false;
-    } else {
-      clearError(fileInput, "file-error");
-      return true;
-    }
-  }
+  // function validateFile() {
+  //   const file = fileInput.files[0];
+  //   if (file && file.size > 2 * 1024 * 1024) {
+  //     displayError(fileInput, "file-error", "Image must be smaller than 2MB");
+  //     return false;
+  //   } else {
+  //     clearError(fileInput, "file-error");
+  //     return true;
+  //   }
+  // }
 
   function displayError(
     inputElement,
@@ -264,5 +265,3 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 });
-
-

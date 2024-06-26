@@ -35,3 +35,14 @@ To test the validation, you can use a curl command to send a POST request to the
 }'
 
 ```
+
+
+To run Jest tests:
+
+
+```bash
+
+➜  Form git:(main) ✗ npm test
+
+
+```

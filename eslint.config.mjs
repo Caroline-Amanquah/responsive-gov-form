@@ -54,4 +54,3 @@ export default [
     ignores: ['.server', '.public', 'src/__fixtures__', 'coverage']
   }
 ];
-
