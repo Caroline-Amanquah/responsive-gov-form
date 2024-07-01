@@ -240,5 +240,20 @@
       "Personal and Family Services"
     ],
     "telephoneNumber": "07123456789"
+  },
+  {
+    "fullName": "John Lewis",
+    "eventName": "john.doe@example.com",
+    "nationalInsuranceNumber": "PC123456C",
+    "password": "Password123!",
+    "dob-day": 27,
+    "dob-month": 3,
+    "dob-year": 1992,
+    "whereDoYouLive": "england",
+    "accountPurpose": [
+      "Benefits and Financial Services",
+      "Personal and Family Services"
+    ],
+    "telephoneNumber": "07123456789"
   }
 ]

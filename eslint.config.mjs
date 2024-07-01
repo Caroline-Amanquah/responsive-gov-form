@@ -15,7 +15,7 @@ export default [
       globals: {
         ...globals.browser,
         process: "readonly",
-        __dirname: "readonly"
+        __dirname: "readonly",
       }
     },
     plugins: {
@@ -50,6 +50,28 @@ export default [
     },
   },
   pluginJs.configs.recommended,
+  {
+    files: ["**/*.test.js"], // Apply Jest settings only to test files
+    languageOptions: {
+      globals: {
+        ...globals.jest, // Include Jest globals
+        describe: "readonly",
+        beforeAll: "readonly",
+        afterAll: "readonly",
+        beforeEach: "readonly",
+        afterEach: "readonly",
+        test: "readonly",
+        expect: "readonly"
+      },
+    },
+    plugins: {
+      jest: jestPlugin,
+      'jest-formatting': jestFormattingPlugin,
+    },
+    rules: {
+      // Jest specific rules can be added here
+    }
+  },
   {
     ignores: ['.server', '.public', 'src/__fixtures__', 'coverage']
   }
