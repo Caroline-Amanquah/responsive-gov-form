@@ -77,7 +77,7 @@ const init = async (port = process.env.PORT || 3000) => {
       .required(),
     telephoneNumber: Joi.string()
       .pattern(/^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$/)
-      .required()
+      .required(),
     // fileUpload: Joi.any().optional(),
   });
 

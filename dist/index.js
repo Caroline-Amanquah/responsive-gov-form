@@ -8,8 +8,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const dobDayInput = document.getElementById("dob-day");
   const dobMonthInput = document.getElementById("dob-month");
   const dobYearInput = document.getElementById("dob-year");
-  const originInputs = document.querySelectorAll('input[name="whereDoYouLive"]');
-  const purposeInputs = document.querySelectorAll('input[name="accountPurpose"]');
+  const originInputs = document.querySelectorAll(
+    'input[name="whereDoYouLive"]',
+  );
+  const purposeInputs = document.querySelectorAll(
+    'input[name="accountPurpose"]',
+  );
   const phoneInput = document.getElementById("telephone-number");
 
   form.addEventListener("submit", function (event) {
@@ -29,10 +33,10 @@ document.addEventListener("DOMContentLoaded", function () {
   phoneInput.addEventListener("input", () => validatePhone());
 
   originInputs.forEach((input) =>
-    input.addEventListener("change", () => validateOrigin())
+    input.addEventListener("change", () => validateOrigin()),
   );
   purposeInputs.forEach((input) =>
-    input.addEventListener("change", () => validatePurpose())
+    input.addEventListener("change", () => validatePurpose()),
   );
 
   function validateForm() {
@@ -67,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
       displayError(
         emailInput,
         "email-error",
-        "Enter an email address in the correct format, like name@example.com."
+        "Enter an email address in the correct format, like name@example.com.",
       );
       return false;
     } else {
@@ -82,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
       displayError(
         niInput,
         "national-insurance-number-error",
-        "Enter your National Insurance number in the correct format."
+        "Enter your National Insurance number in the correct format.",
       );
       return false;
     } else {
@@ -107,12 +111,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const dobFormGroup = document.getElementById("dob-form-group");
     const errorContainer = document.getElementById("dob-error-container");
 
-    if (!dobDayInput.value.trim() || !dobMonthInput.value.trim() || !dobYearInput.value.trim()) {
+    if (
+      !dobDayInput.value.trim() ||
+      !dobMonthInput.value.trim() ||
+      !dobYearInput.value.trim()
+    ) {
       displayError(
         dobFormGroup,
         "dob-error",
         "Enter a valid date.",
-        errorContainer
+        errorContainer,
       );
       dobDayInput.classList.add("govuk-input--error");
       dobMonthInput.classList.add("govuk-input--error");
@@ -139,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
         originInputs[0],
         "origin-error",
         "Select the country where you live.",
-        document.getElementById("origin-error-container")
+        document.getElementById("origin-error-container"),
       );
       return false;
     } else {
@@ -160,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
         purposeInputs[0],
         "purpose-error",
         "Select an account purpose.",
-        document.getElementById("purpose-error-container")
+        document.getElementById("purpose-error-container"),
       );
       return false;
     } else {
@@ -184,7 +192,7 @@ document.addEventListener("DOMContentLoaded", function () {
     inputElement,
     errorId,
     errorMessage,
-    errorContainer = null
+    errorContainer = null,
   ) {
     const formGroup = inputElement.closest(".govuk-form-group");
     formGroup.classList.add("govuk-form-group--error");
@@ -225,7 +233,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const data = {};
 
     formData.forEach((value, key) => {
-      if (key !== "fileUpload1") { // Exclude fileUpload1 field
+      if (key !== "fileUpload1") {
+        // Exclude fileUpload1 field
         if (!data[key]) {
           data[key] = value;
         } else {

@@ -284,5 +284,20 @@
       "Personal and Family Services"
     ],
     "telephoneNumber": "07123456789"
+  },
+  {
+    "fullName": "ca",
+    "eventName": "ca@gmail.com",
+    "nationalInsuranceNumber": "PC123456C",
+    "password": "Hello789@",
+    "dob-day": 25,
+    "dob-month": 2,
+    "dob-year": 1997,
+    "whereDoYouLive": "northern-ireland",
+    "accountPurpose": [
+      "Personal and Family Services",
+      "Travel and Legal Services"
+    ],
+    "telephoneNumber": "07464758674"
   }
 ]
