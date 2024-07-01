@@ -255,5 +255,34 @@
       "Personal and Family Services"
     ],
     "telephoneNumber": "07123456789"
+  },
+  {
+    "fullName": "DD",
+    "eventName": "dd@gmail.com",
+    "nationalInsuranceNumber": "PC123456C",
+    "password": "123hELLO@",
+    "dob-day": 3,
+    "dob-month": 4,
+    "dob-year": 2024,
+    "whereDoYouLive": "scotland",
+    "accountPurpose": [
+      "Travel and Legal Services"
+    ],
+    "telephoneNumber": "07345678932"
+  },
+  {
+    "fullName": "John Lewis",
+    "eventName": "john.doe@example.com",
+    "nationalInsuranceNumber": "PC123456C",
+    "password": "Password123!",
+    "dob-day": 27,
+    "dob-month": 3,
+    "dob-year": 1992,
+    "whereDoYouLive": "england",
+    "accountPurpose": [
+      "Benefits and Financial Services",
+      "Personal and Family Services"
+    ],
+    "telephoneNumber": "07123456789"
   }
 ]
