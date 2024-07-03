@@ -156,4 +156,66 @@ describe("Hapi Server", () => {
     expect(res.result.status).toBe("error");
     expect(res.result.message).toBe("Failed to write data");
   });
+
+  test("should handle invalid form submissions", async () => {
+    const invalidPayload = {
+      fullName: "J",
+      eventName: "john.doe",
+      nationalInsuranceNumber: "INVALID",
+      password: "123",
+      "dob-day": 32,
+      "dob-month": 13,
+      "dob-year": 1800,
+      whereDoYouLive: "invalid-location",
+      accountPurpose: ["Invalid Purpose"],
+      telephoneNumber: "INVALID",
+    };
+
+    const res = await server.inject({
+      method: "POST",
+      url: "/submissions",
+      payload: invalidPayload,
+    });
+
+    expect(res.statusCode).toBe(400);
+    expect(res.result.status).toBe("error");
+  });
+
+  test("should handle empty payload submission", async () => {
+    const res = await server.inject({
+      method: "POST",
+      url: "/submissions",
+      payload: {},
+    });
+
+    expect(res.statusCode).toBe(400);
+    expect(res.result.status).toBe("error");
+  });
+
+  test("should handle invalid JSON data in db.json", async () => {
+    mock({
+      "db.json": "[Invalid JSON",
+    });
+
+    const res = await server.inject({
+      method: "GET",
+      url: "/submissions",
+    });
+
+    expect(res.statusCode).toBe(500);
+    expect(res.result.status).toBe("error");
+    expect(res.result.message).toBe("Failed to read data");
+  });
+
+  test("should handle unhandledRejection event", async () => {
+    const originalExit = process.exit;
+    const exitMock = jest.fn();
+    process.exit = exitMock;
+
+    process.emit("unhandledRejection", new Error("Unhandled Error"));
+
+    expect(exitMock).toHaveBeenCalledWith(1);
+
+    process.exit = originalExit;
+  });
 });
