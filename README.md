@@ -37,7 +37,7 @@ To test the joi validation, you can use a curl command to send a POST request to
 ```X$
 
 
-To run Jest tests:
+To run the Jest unit tests:
 
 
 ```bash
