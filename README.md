@@ -1,6 +1,6 @@
 
 
-To render the form on your screen do the following: 
+To render the form on your screen do the following commands and then copy and paste  http://localhost:3000 into the browser: 
 
 ```bash
 ➜  Form git:(main) ✗ npm install
@@ -18,7 +18,7 @@ To run ESLint, run the following command:
 ➜  Form git:(main) ✗ npm run lint:js    
 ```
 
-To test the validation, you can use a curl command to send a POST request to the /validate endpoint, for example:
+To test the joi validation, you can use a curl command to send a POST request to the /submissions endpoint, for example:
 
 ```bash
 ➜  Form git:(main) ✗ curl -X POST http://localhost:3000/submissions -H "Content-Type: application/json" -d '{
@@ -34,15 +34,13 @@ To test the validation, you can use a curl command to send a POST request to the
   "telephoneNumber": "07123456789"
 }'
 
-```
+```X$
 
 
 To run Jest tests:
 
 
 ```bash
-
 ➜  Form git:(main) ✗ npm test
-
 
 ```
