@@ -34,7 +34,7 @@ To test the joi validation, you can use a curl command to send a POST request to
   "telephoneNumber": "07123456789"
 }'
 
-```X$
+```
 
 
 To run the Jest unit tests:
